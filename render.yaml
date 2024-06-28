@@ -1,0 +1,18 @@
+services:
+- type: web
+  name: Train-reservation-app
+  env: python
+  plan: free
+  buildCommand: "pip install -r requirements.txt"
+  startCommand: "gunicorn main:app --bind 0.0.0.0:10000"
+  envVars:
+    - key: GMAIL_USER
+      value: peeradil6005@gmail.com
+    - key: GMAIL_PASSWORD
+      value: hwfd msyr wcxh dnrn
+    - key: TWILIO_ACCOUNT_SID
+      value: AC6138227a089904b23af79da73d822dd5
+    - key: TWILIO_AUTH_TOKEN
+      value: 5ae36e3a2879f95cb29066ad38d519ed
+    - key: TWILIO_PHONE_NUMBER
+      value: +14455451284
