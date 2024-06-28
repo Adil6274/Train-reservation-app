@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Reservation</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Reserve Your Ticket</h1>
+        <form action="/reserve" method="POST">
+            <label for="trainno">Train Number:</label>
+            <input type="number" id="trainno" name="trainno" required>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="status">Class:</label>
+            <select id="status" name="status" required>
+                <option value="A/C FIRST CLASS">A/C FIRST CLASS</option>
+                <option value="A/C SECOND CLASS">A/C SECOND CLASS</option>
+                <option value="FIRST CLASS SLEEPER">FIRST CLASS SLEEPER</option>
+                <option value="A/C CHAIR CLASS">A/C CHAIR CLASS</option>
+                <option value="SECOND CLASS SLEEPER">SECOND CLASS SLEEPER</option>
+            </select>
+
+            <input type="submit" value="Reserve Ticket" class="button">
+        </form>
+    </div>
+</body>
+</html>
